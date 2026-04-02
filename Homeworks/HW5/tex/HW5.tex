@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{pdfpages}
+\tcbuselibrary{listings, skins, breakable}
+
+% Output box environment (black background, white text)
+\newtcolorbox{outputbox}[1]{
+    arc=3mm,
+    boxrule=1pt,
+    colback=black!85!white,
+    colframe=black,
+    coltext=white,
+    title={\textbf{#1}},
+    fontupper=\ttfamily\scriptsize,
+    left=2mm, right=2mm, top=2mm, bottom=2mm,
+    fontupper=\ttfamily\scriptsize\obeylines,
+    breakable
+}
+
+% Python code box environment
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue!80!black}\bfseries,
+    stringstyle=\color{green!60!black},
+    commentstyle=\color{gray}\itshape,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=3.5pt,
+    breaklines=true,
+    tabsize=4
+}
+\newtcblisting{pythonbox}[1]{
+    arc=3mm,
+    boxrule=1pt,
+    colback=yellow!5!white,
+    colframe=yellow!50!black,
+    title={\textbf{#1}},
+    listing only,
+    listing style=pythonstyle,
+    breakable
+}
+
+% ── Title ─────────────────────────────────────────────────────────────────────
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\includegraphics[width=0.55\textwidth]{images/ozu.png}\\[2cm]
+
+\rule{\linewidth}{0.5mm}\\[0.4cm]
+
+{ \LARGE
+  \textbf{PHYS551: Advanced Monte Carlo Methods}\\[0.4cm]
+  \emph{Homework 5}\\[0.4cm]
+}
+\rule{\linewidth}{0.5mm}\\[0.4cm]
+
+\hfill\hfill
+
+\linewidth=0.8\textwidth
+\begin{minipage}{0.4\textwidth}
+    \begin{flushleft} \large
+        \emph{Student:}\\
+        Ömer Faruk \textsc{Avcı}
+    \end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.5\textwidth}
+    \begin{flushright} \large
+        \emph{Instructor:}\\
+        Prof. Dr. Taylan \textsc{Akdo\u{g}an}\\[0.1cm]
+    \end{flushright}
+\end{minipage}
+
+\vfill
+
+\textsc{\large Department of Electrical and Electronics Engineering}\\[0.4cm]
+
+{\large \today}
+
+\end{center}
+\end{titlepage}
+
+\end{document}
